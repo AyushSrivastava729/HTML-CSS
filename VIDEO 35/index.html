@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        .boxes * {
+            color: blue;
+            border: 2px solid black;
+        }
+
+        /* .boxes{
+            background-color: yellow;
+        }
+
+        .box:nth-child(1){
+            background-color: red;
+        }
+
+        .box::first-line{
+            background-color: blue;
+        } */
+
+        /* grouping of a attribute selector 
+         p,a,.box, [data-color="primary"]{
+            padding-top: 45px;
+         } */
+
+        /*.box:nth-child(even){
+            background-color: yellow;
+         } */
+        .box:nth-last-child(1) {
+            background-color: rgb(206, 212, 29);
+        }
+
+        /* dynamically inserting elements through css */
+        .boxes ::before {
+            content: "Ayush is good";
+            color: orange
+        }
+
+        .boxes ::after {
+            content: "Bhupendra and girish is also good";
+            color: red;
+        }
+
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+        .boxes ::first-letter {
+            color: black
+        }
+
+        input::placeholder {
+            color: rgb(29, 29, 116);
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur tenetur
+            quibusdam est repellendus quod accusamus! Quam, vel! Consequuntur saepe eum repellat excepturi ipsum laborum
+            tempore molestias maxime, perspiciatis id. Exercitationem obcaecati, nesciunt, vel blanditiis doloremque
+            sint aliquam repellendus dolorem, animi cum corporis quasi excepturi est.</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Enter your name here">
+    </div>
+
+
+</body>
+
+</html>
